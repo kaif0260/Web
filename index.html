@@ -3,227 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-adsense-account" content="ca-pub-2998154287242821">
-<title>Modern Website</title>
-
-<!-- ✅ Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9TH2P0SFMZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-9TH2P0SFMZ');
-</script>
-
+<title>Morning Glory NGO</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    scroll-behavior:smooth;
-}
-
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    background:#111;
-    padding:15px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-nav h2{
-    color:#00d4ff;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:20px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-}
-
-nav ul li a:hover{
-    color:#00d4ff;
-}
-
-/* HERO */
-header{
-    height:100vh;
-    background:linear-gradient(to right,#000428,#004e92);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-}
-
-header h1{
-    font-size:60px;
-}
-
-header p{
-    margin:20px 0;
-    font-size:20px;
-}
-
-header button{
-    padding:12px 25px;
-    border:none;
-    background:#00d4ff;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-/* SECTION */
-section{
-    padding:80px 50px;
-    text-align:center;
-}
-
-.services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.card{
-    width:300px;
-    padding:20px;
-    background:#f4f4f4;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    background:#00d4ff;
-    color:white;
-}
-
-/* AD BOX */
-.ad-box{
-    margin-top:30px;
-}
-
-/* FOOTER */
-footer{
-    background:#111;
-    color:white;
-    padding:20px;
-}
-
-/* ANIMATION */
-.fade{
-    opacity:0;
-    transform:translateY(20px);
-    transition:1s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+body{font-family:Arial}
+.navbar{background:#dfcdcf}
+.hero{height:90vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1603575448369-0c2e6c0b2c0a');background-size:cover;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
+section{padding:60px 0}
+.card:hover{transform:scale(1.05);transition:.3s}
+.footer{background:#222;color:#fff;padding:20px;text-align:center}
 </style>
 </head>
-
 <body>
-
-<nav>
-    <h2>MySite</h2>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand fw-bold">Morning Glory</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+<li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+<li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+<li class="nav-item">
+<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contact">Donate</button>
+</li>
+</ul>
+</div>
+</div>
 </nav>
-
-<header id="home">
-    <div>
-        <h1>Welcome to My Website</h1>
-        <p>Analytics + Ads Enabled Website</p>
-        <button onclick="scrollToSection('about')">Explore</button>
-    </div>
-</header>
-
-<section id="about" class="fade">
-    <h2>About</h2>
-    <p>This website tracks users and displays ads properly.</p>
+<div class="hero">
+<div>
+<h1>A Mission With A Vision</h1>
+<p>Helping communities grow and thrive</p>
+<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contact">Join Us</button>
+</div>
+</div>
+<section id="about">
+<div class="container text-center">
+<h2>About Us</h2>
+<p>We work to provide education, healthcare and support to underprivileged communities.</p>
+</div>
 </section>
-
-<section id="services" class="fade">
-    <h2>Services</h2>
-    <div class="services">
-        <div class="card">Web Development</div>
-        <div class="card">Design</div>
-        <div class="card">App Development</div>
-    </div>
+<section id="services" class="bg-light">
+<div class="container text-center">
+<h2>Our Services</h2>
+<div class="row mt-4">
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Education</h4>
+<p>Free education programs for children.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Healthcare</h4>
+<p>Medical camps for rural communities.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Women Empowerment</h4>
+<p>Training and support programs.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<section id="contact" class="fade">
-    <h2>Contact</h2>
-
-    <button onclick="trackClick()">Click Me (Tracked)</button>
-
-    <!-- ✅ Ad Unit -->
-    <div class="ad-box">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2998154287242821"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-    </div>
+<section id="team">
+<div class="container text-center">
+<h2>Our Team</h2>
+<p>Dedicated people working for a better future.</p>
+</div>
 </section>
-
-<footer>
-    <p>© 2026 My Website</p>
-</footer>
-
-<script>
-// Smooth scroll
-function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({behavior:"smooth"});
-}
-
-// Animation
-const elements = document.querySelectorAll('.fade');
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        if(el.getBoundingClientRect().top < window.innerHeight - 100){
-            el.classList.add('show');
-        }
-    });
-});
-
-// Analytics Event
-function trackClick(){
-    gtag('event', 'button_click', {
-        event_category: 'engagement',
-        event_label: 'contact_button'
-    });
-    alert("Tracked Click!");
-}
-
-// Load Ads
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+<div class="modal fade" id="contact">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Contact Us</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<input type="text" class="form-control mb-2" placeholder="Name">
+<input type="email" class="form-control mb-2" placeholder="Email">
+<textarea class="form-control mb-2" placeholder="Message"></textarea>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button class="btn btn-danger">Send</button>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>© 2026 Morning Glory NGO</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
