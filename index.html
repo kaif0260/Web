@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modern Website</title>
-  
 
-<!-- ✅ Google Analytics (FIXED POSITION) -->
+<!-- ✅ Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TH2P0SFMZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,8 +13,11 @@
   gtag('js', new Date());
   gtag('config', 'G-9TH2P0SFMZ');
 </script>
+
+<!-- ✅ Google Ads -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2998154287242821"
-     crossorigin="anonymous"></script>
+crossorigin="anonymous"></script>
+
 <style>
 *{
     margin:0;
@@ -56,7 +58,6 @@ nav ul li{
 nav ul li a{
     color:white;
     text-decoration:none;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -76,21 +77,18 @@ header{
 
 header h1{
     font-size:60px;
-    margin-bottom:20px;
 }
 
 header p{
+    margin:20px 0;
     font-size:20px;
-    margin-bottom:30px;
 }
 
 header button{
     padding:12px 25px;
     border:none;
     background:#00d4ff;
-    color:black;
     cursor:pointer;
-    font-weight:bold;
     border-radius:5px;
 }
 
@@ -102,8 +100,8 @@ section{
 
 .services{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
+    justify-content:center;
     gap:20px;
 }
 
@@ -121,11 +119,15 @@ section{
     color:white;
 }
 
+/* AD BOX */
+.ad-box{
+    margin-top:30px;
+}
+
 /* FOOTER */
 footer{
     background:#111;
     color:white;
-    text-align:center;
     padding:20px;
 }
 
@@ -158,28 +160,39 @@ footer{
 <header id="home">
     <div>
         <h1>Welcome to My Website</h1>
-        <p>Modern Website with Google Analytics</p>
+        <p>Analytics + Ads Enabled Website</p>
         <button onclick="scrollToSection('about')">Explore</button>
     </div>
 </header>
 
 <section id="about" class="fade">
     <h2>About</h2>
-    <p>This website now properly tracks users using Google Analytics.</p>
+    <p>This website tracks users and displays ads properly.</p>
 </section>
 
 <section id="services" class="fade">
     <h2>Services</h2>
     <div class="services">
-        <div class="card">Web Dev</div>
+        <div class="card">Web Development</div>
         <div class="card">Design</div>
-        <div class="card">Apps</div>
+        <div class="card">App Development</div>
     </div>
 </section>
 
 <section id="contact" class="fade">
     <h2>Contact</h2>
+
     <button onclick="trackClick()">Click Me (Tracked)</button>
+
+    <!-- ✅ Ad Unit -->
+    <div class="ad-box">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2998154287242821"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
 </section>
 
 <footer>
@@ -187,6 +200,7 @@ footer{
 </footer>
 
 <script>
+// Smooth scroll
 function scrollToSection(id){
     document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
@@ -201,14 +215,17 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ✅ Custom Event Tracking
+// Analytics Event
 function trackClick(){
-    alert("Tracked Click!");
     gtag('event', 'button_click', {
         event_category: 'engagement',
         event_label: 'contact_button'
     });
+    alert("Tracked Click!");
 }
+
+// Load Ads
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </body>
